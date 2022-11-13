@@ -1,0 +1,15 @@
+
+	temp = {
+	'stopSellingBtn': 'stopSellingBtn.png', # 판매중지 태그 
+	'firstChkBox':'firstChkBox.png', # 첫번째 체크박스(전체선택용)
+	'delProductBtn':'delProductBtn.png',# 삭제버튼
+	'msgBoxDelWarn':'msgBoxDelWarn.png',# 삭제경고 페이지
+	'okayBtn':'msgBoxDelWarnOkay.png',# confirm창 확인버튼
+	'onLoading':'onLoading.png',# 로딩중인 그림 -- 사용 x
+	'loading':'loading.png', #로딩중인 그림과 로딩중글씨 같이 캡쳐
+	'moreProduct':'moreProduct.png',# 수정 밑에 밑줄쳐져있는 수정 글씨 좁게 캡쳐
+	'delErrorMsg':'delErrorMsg.png',# 삭제에러 총 두개
+	'delErrorMsg2':'delErrorMsg2.png',#삭제 에러 총 두개 --하나로 통일해보기 -- 상품만 가능합니다로
+	'dropdown30':'dropdown30.png', #드롭다운 누르기위한 30
+	'select500':'select500.png' #설정할 개수
+	}
