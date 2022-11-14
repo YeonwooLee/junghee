@@ -63,7 +63,7 @@ def imgExist(img):
 #나타났다사라짐
 def disappear(imgFileName,confidence):
     while not imgExistWithConfidence(imgFileName,confidence)['exist']:
-        print(imgFileName+" 의 존재가 확인되었습니다")
+        print(imgFileName+" 의 등장을 기다리는중")
         print(imgExistWithConfidence(imgFileName,confidence)['exist'])
     while imgExistWithConfidence(imgFileName,confidence)['exist']:
         pass
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 	'delErrorMsg':'delErrorMsg.png',# 삭제에러 총 두개
 	'delErrorMsg2':'delErrorMsg2.png',#삭제 에러 총 두개 --하나로 통일해보기 -- 상품만 가능합니다로
 	'dropdown30':'dropdown30.png', #드롭다운 누르기위한 30
-	'select500':'select500.png' #설정할 개수
+	'select500':'select500.png', #설정할 개수
 	'nodata':'nodata.png' #다지우면 나오는화면
 	}
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
 	# 	print(imgExistWithConfidence(temp['delErrorMsg'],0.95)['exist'])
 
     # 추가상품이 있는 한 계속
-	while not imgExistWithConfidence(temp['nodata'],0.95)['exist']:
+	while True:
 		print("\n\n삭제할 상품 존재")
 
 		# 판매중지 태그 클릭
