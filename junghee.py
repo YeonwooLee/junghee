@@ -136,6 +136,14 @@ def imgExistWithConfidence(img,confidenceRate):
         result['imgPosition'] = imgPosition
     return result
 
+
+def disappear(imgFileName,confidence):
+    while not imgExistWithConfidence(imgFileName,confidence)['exist']:
+        print(imgFileName+" 의 존재가 확인되었습니다")
+        print(imgExistWithConfidence(imgFileName,confidence)['exist'])
+    while imgExistWithConfidence(imgFileName,confidence)['exist']:
+        pass
+
 def mouseToImgAndClick(img):
     while True:
         imgPosition = pyautogui.locateOnScreen(img, confidence=0.95)
@@ -218,6 +226,7 @@ if __name__ == "__main__":
 	# while True: #이건 이미지 정확도 체크용코드
 	# 	print(imgExistWithConfidence(temp['delErrorMsg'],0.95)['exist'])
 
+    # 추가상품이 있는 한 계속
 	while imgExistWithConfidence(temp['moreProduct'],0.95)['exist']:
 		print("\n\n삭제할 상품 존재")
 
@@ -228,9 +237,12 @@ if __name__ == "__main__":
 		#로딩
 		while not imgExistWithConfidence(temp['loading'],0.5)['exist']:
 			print(imgExistWithConfidence(temp['loading'],0.5)['exist'])
-		print("존재확인1")
+		print("")
 		while imgExistWithConfidence(temp['loading'],0.5)['exist']:
 			pass
+
+
+        # disappear(temp['loading'],0.5)
 		
 		#드롭다운선택
 		mouseToImgAndClick2(temp['dropdown30'])
