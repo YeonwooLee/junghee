@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
     # 추가상품이 있는 한 계속
 	while True:
-		print("\n\n삭제할 상품 존재")
+		# print("\n\n삭제할 상품 존재")
 
 		# 판매중지 태그 클릭
 		mouseToImgAndClick2(temp['stopSellingBtn'])
